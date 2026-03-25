@@ -1,6 +1,12 @@
 [
 null,
-{"id":1,"expanded":true,"name":"村莊1","order":1,"parentId":0,"scrollX":821,"scrollY":458.5,"quick":false},
-{"id":2,"expanded":false,"name":"酒吧","order":2,"parentId":1,"scrollX":1227,"scrollY":494,"quick":false},
-{"id":3,"expanded":false,"name":"武器盔甲商店","order":3,"parentId":1,"scrollX":603,"scrollY":326.5,"quick":false}
+{"id":1,"expanded":true,"name":"村莊1","order":1,"parentId":0,"scrollX":611,"scrollY":478.5,"quick":false},
+{"id":2,"expanded":false,"name":"酒吧","order":2,"parentId":1,"scrollX":603,"scrollY":326.5,"quick":false},
+{"id":3,"expanded":false,"name":"武器盔甲商店","order":3,"parentId":1,"scrollX":603,"scrollY":326.5,"quick":false},
+{"id":4,"expanded":true,"name":"村長之家 1F","order":4,"parentId":1,"scrollX":603,"scrollY":326.5,"quick":false},
+{"id":5,"expanded":false,"name":"村長之家 2F","order":5,"parentId":4,"scrollX":0,"scrollY":0,"quick":false},
+{"id":6,"expanded":false,"name":"旅館","order":6,"parentId":1,"scrollX":603,"scrollY":326.5,"quick":false},
+{"id":7,"expanded":false,"name":"民房2","order":7,"parentId":1,"scrollX":603,"scrollY":326.5,"quick":false},
+{"id":8,"expanded":false,"name":"民房1","order":8,"parentId":1,"scrollX":603,"scrollY":326.5,"quick":false},
+{"id":9,"expanded":false,"name":"道具商店","order":9,"parentId":1,"scrollX":603,"scrollY":326.5,"quick":false}
 ]
