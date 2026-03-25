@@ -1,1 +1,6 @@
-[null,{"id":1,"expanded":true,"name":"村莊1","order":1,"parentId":0,"scrollX":1235,"scrollY":686,"quick":false},{"id":2,"expanded":false,"name":"酒吧","order":2,"parentId":1,"scrollX":1227,"scrollY":494,"quick":false},{"id":3,"expanded":false,"name":"武器防具舖","order":3,"parentId":1,"scrollX":0,"scrollY":0,"quick":false}]
+[
+null,
+{"id":1,"expanded":true,"name":"村莊1","order":1,"parentId":0,"scrollX":821,"scrollY":458.5,"quick":false},
+{"id":2,"expanded":false,"name":"酒吧","order":2,"parentId":1,"scrollX":1227,"scrollY":494,"quick":false},
+{"id":3,"expanded":false,"name":"武器盔甲商店","order":3,"parentId":1,"scrollX":603,"scrollY":326.5,"quick":false}
+]
