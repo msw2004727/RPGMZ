@@ -1,11 +1,11 @@
 {
     "name": "rmmz-game",
     "main": "index.html",
-    "chromium-args": "--force-color-profile=srgb --disable-devtools",
+    "chromium-args": "--force-color-profile=srgb",
     "window": {
         "title": "AI江湖異世界",
-        "width": 816,
-        "height": 624,
+        "width": 1280,
+        "height": 720,
         "position": "center",
         "icon": "icon/icon.png"
     }
