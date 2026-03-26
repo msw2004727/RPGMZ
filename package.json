@@ -4,8 +4,8 @@
     "chromium-args": "--force-color-profile=srgb",
     "window": {
         "title": "AI江湖異世界",
-        "width": 1280,
-        "height": 720,
+        "width": 720,
+        "height": 1280,
         "position": "center",
         "icon": "icon/icon.png"
     }
