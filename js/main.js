@@ -82,6 +82,7 @@ class Main {
 
     onScriptLoad() {
         if (++this.loadCount === this.numScripts) {
+            this.applyResponsiveScreenPatch();
             PluginManager.setup($plugins);
         }
     }
@@ -143,6 +144,52 @@ class Main {
         const onLoad = this.onEffekseerLoad.bind(this);
         const onError = this.onEffekseerError.bind(this);
         effekseer.initRuntime(effekseerWasmUrl, onLoad, onError);
+    }
+
+    applyResponsiveScreenPatch() {
+        if (this._responsiveScreenPatched || typeof Scene_Boot !== "function") {
+            return;
+        }
+
+        this._responsiveScreenPatched = true;
+
+        const boxMargin = 4;
+        const normalizeSize = value => Math.max(240, Math.round(value / 2) * 2);
+        const calculateResponsiveSize = dataSystem => {
+            const advanced = dataSystem?.advanced ?? {};
+            const baseWidth = Number(advanced.screenWidth) || 720;
+            const baseHeight = Number(advanced.screenHeight) || 1280;
+            const shortSide = Math.min(baseWidth, baseHeight);
+            const viewportWidth = Math.max(
+                window.innerWidth || document.documentElement.clientWidth || shortSide,
+                1
+            );
+            const viewportHeight = Math.max(
+                window.innerHeight || document.documentElement.clientHeight || shortSide,
+                1
+            );
+
+            if (viewportHeight >= viewportWidth) {
+                return {
+                    width: normalizeSize(shortSide),
+                    height: normalizeSize(shortSide * (viewportHeight / viewportWidth))
+                };
+            }
+
+            return {
+                width: normalizeSize(shortSide * (viewportWidth / viewportHeight)),
+                height: normalizeSize(shortSide)
+            };
+        };
+
+        Scene_Boot.prototype.resizeScreen = function() {
+            const { width, height } = calculateResponsiveSize(window.$dataSystem);
+            Graphics.resize(width, height);
+            Graphics.defaultScale = this.screenScale();
+            Graphics.boxWidth = width - boxMargin * 2;
+            Graphics.boxHeight = height - boxMargin * 2;
+            this.adjustWindow();
+        };
     }
 
     onEffekseerLoad() {
